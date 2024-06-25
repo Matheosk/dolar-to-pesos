@@ -4,7 +4,7 @@ const texto = document.getElementById('cambio');
 
 // Conseguimos el valor del dolar actualizado desde DolarAPI
 async function getDollarValueFromApi() {
-  const response = await fetch("https://dolarapi.com/v1/dolares/tarjeta");
+  const response = await fetch("https://dolarapi.com/v1/dolares/blue");
   const data = await response.json();
   return parseInt(data.venta);
 }
