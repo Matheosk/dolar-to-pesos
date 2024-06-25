@@ -19,7 +19,7 @@ async function calculateValue() {
     let cambio = entrada * dollarValue;
 
     // Actualizamos el resultado solamente si el usuario ingreso un dato
-    if (entrada !== "") {
+    if (entrada !== "" && entrada !== "0") {
       texto.innerText = `${entrada} USD = ${cambio} ARS \n (Cambio Blue)`;
     }
   });
