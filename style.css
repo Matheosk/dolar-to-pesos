@@ -54,7 +54,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-p {
+p:not(#footer) {
   font-size: 30px;
 }
 
