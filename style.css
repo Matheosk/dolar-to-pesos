@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-  width: 50vw;
   max-width: 600px;
   min-height: 350px;
   display: flex;
@@ -44,6 +43,7 @@ input {
   border: 2px solid rgb(200,200,200);
   text-align: center;
 }
+
 /* Hide Arrows in inputs */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -52,6 +52,10 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+p {
+  font-size: 30px;
 }
 
 

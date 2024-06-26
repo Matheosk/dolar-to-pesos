@@ -1,5 +1,6 @@
 // Declaramos elementos del DOM
 const inputDollar = document.getElementById('input-dolar');
+const inputPesos = document.getElementById('input-pesos');
 const texto = document.getElementById('cambio');
 
 // Conseguimos el valor del dolar actualizado desde DolarAPI
@@ -18,11 +19,19 @@ async function calculateValue() {
     let entrada = e.target.value;
     let cambio = entrada * dollarValue;
 
-    // Actualizamos el resultado solamente si el usuario ingreso un dato
     if (entrada !== "" && entrada !== "0") {
-      texto.innerText = `${entrada} USD = ${cambio} ARS \n (Cambio Blue)`;
+      inputPesos.value = cambio;
     }
   });
+  inputPesos.addEventListener('change', (e) => {
+    let entrada = e.target.value;
+    let cambio = entrada / dollarValue;
+
+    if (entrada !== "" && entrada !== "0") {
+      inputDollar.value = cambio;
+    }
+  });
+    
 }
 calculateValue();
 
